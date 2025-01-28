@@ -215,7 +215,7 @@ mCore.createSQLTable = (function(tableName, tableRows)
     local query = "SHOW TABLES LIKE ?"
     MySQL.scalar(query, { tableName }, function(exists)
         if exists then
-            mCore.log(("^7[^3SQL^7]: ^7'^6%s^7' table already exists !"):format(tableName))
+            mCore.debug.log(("^7[^3SQL^7]: ^7'^6%s^7' table already exists !"):format(tableName))
             obj.exists = true
             return p:resolve(obj)
         end

@@ -164,6 +164,7 @@ mCore.DrawCustomIcon = function(coords, icon, drawOnEnts)
 
      local markerType = 9
      local scale = type(coords) == "vector4" and coords.w or 0.5
+     print("drawing markerCUSTOMICON")
      DrawMarker(
           markerType,
           coords.x, coords.y, coords.z,
@@ -193,6 +194,7 @@ mCore.DrawCustomMarker = (function(coords, icon, markerType, size, color)
           color.y,
           color.z, color.w,
           false, false, 2, false, nil, nil, false)
+     print("drawing markerCUSTOMMARKER")
 end)
 
 mCore.log = (function(message, isLocal)
